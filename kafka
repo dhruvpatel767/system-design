@@ -1,0 +1,46 @@
+
+𝗕𝗮𝘀𝗶𝗰 𝗟𝗲𝘃𝗲𝗹:
+
+1 What is Apache Kafka, and what are its core components?
+
+Apache Kafka is a distributed streaming platform used for building real-time data pipelines and streaming applications. Its core components are:
+Producer: Publishes data to topics.
+Consumer: Subscribes to topics and processes the data.
+Broker: A server in a Kafka cluster that stores messages.
+Topic: A category or feed name to which records are published.
+Partition: A division of a topic that helps distribute load.
+Zookeeper: Used for managing and coordinating Kafka brokers.
+
+2 Explain the difference between a topic, partition, and segment.
+
+Topic: A topic is a logical channel where producers send messages, and consumers read them.
+Partition: Each topic is divided into partitions to allow parallel processing and scalability. A partition is an ordered sequence of messages.
+Segment: Partitions are further broken into segments on disk for efficient storage and retrieval.
+
+3 How does Kafka ensure message ordering?
+
+Kafka maintains message ordering within a partition. Messages sent to the same partition are appended sequentially and consumed in the same order they were produced.
+
+4 What is a consumer group in Kafka?
+
+A consumer group is a group of consumers that work together to consume messages from a topic. Each partition in a topic is consumed by only one consumer within the group, ensuring that no two consumers read the same message.
+
+5 What is Kafka's replication factor, and why is it important?
+
+The replication factor is the number of copies of a partition across different brokers. It ensures high availability and fault tolerance. If one broker goes down, other brokers with replicas can serve the data.
+
+𝗜𝗻𝘁𝗲𝗿𝗺𝗲𝗱𝗶𝗮𝘁𝗲 𝗟𝗲𝘃𝗲𝗹:
+
+• How does Kafka achieve fault tolerance?
+• Explain Kafka's partitioning strategy and how it impacts performance.
+• What is Kafka retention policy, and how does it work?
+• Describe Kafka's consumer offset management.
+• How can Kafka handle backpressure in real-time data processing?
+
+𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗟𝗲𝘃𝗲𝗹:
+
+• Explain the concept of exactly-once semantics (EOS) in Kafka.
+• How would you monitor and optimize Kafka performance in a production environment?
+• Describe how Kafka handles leader election for partitions.
+• What are the challenges of using Kafka in a multi-datacenter setup?
+• How would you design a Kafka-based system to guarantee data consistency in the event of node failures?
